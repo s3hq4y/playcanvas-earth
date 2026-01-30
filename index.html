@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlayCanvas Earth</title>
+    <link rel="stylesheet" href="styles/ui.css">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #application {
+        width: 100%;
+        height: 100vh;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="application"></canvas>
+    
+    <div id="ui">
+      <button id="toggle-rotation">Pause Rotation</button>
+      <button id="toggle-daynight">Disable Day/Night</button>
+      <button id="toggle-clouds" style="display: none;">Toggle Clouds</button>
+      <button id="toggle-hexgrid" style="display: none;">Toggle Hex Grid</button>
+      <button id="toggle-borders" style="display: none;">Toggle Borders</button>
+      <button id="toggle-flip-lon" style="display: none;">Flip Longitude</button>
+      <button id="reload-config">Reload Config</button>
+      
+
+      <div class="panel">
+        <label class="title" for="sun-angle">Sun Azimuth: <span id="sun-angle-val">0</span>°</label>
+        <div class="controls">
+          <label class="visually-hidden" for="sun-angle-num">Sun Azimuth value</label>
+          <input id="sun-angle" type="range" min="0" max="360" step="1" value="0">
+          <input id="sun-angle-num" type="number" min="0" max="360" step="1" value="0">
+        </div>
+      </div>
+
+      <div class="panel">
+        <label class="title" for="sun-incl">Sun Inclination: <span id="sun-incl-val">0</span>°</label>
+        <div class="controls">
+          <label class="visually-hidden" for="sun-incl-num">Sun Inclination value</label>
+          <input id="sun-incl" type="range" min="-45" max="45" step="1" value="0">
+          <input id="sun-incl-num" type="number" min="-45" max="45" step="1" value="0">
+        </div>
+      </div>
+      
+      <div class="panel">
+        <label class="title" for="lon-offset">Longitude Offset: <span id="lon-offset-val">0</span>°</label>
+        <div class="controls">
+          <label class="visually-hidden" for="lon-offset-num">Longitude Offset value</label>
+          <input id="lon-offset" type="range" min="-180" max="180" step="1" value="0">
+          <input id="lon-offset-num" type="number" min="-180" max="180" step="1" value="0">
+        </div>
+      </div>
+    </div>
+    
+    <script type="module" src="index.ts"></script>
+  </body>
+</html>
