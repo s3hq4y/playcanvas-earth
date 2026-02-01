@@ -65,6 +65,7 @@ let targetDistance = 5;
 let targetPitch = 0;
 let targetYaw = 0;
 
+// 更小的最小距离以允许更高放大倍率（更靠近地球）
 const distanceMin = 1.15;
 const distanceMax = 50;
 const pitchMin = 0.01;

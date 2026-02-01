@@ -9,7 +9,7 @@
   "sunInclination": 0,
   "hexGrid": {
     "enabled": false,
-    "subdivisions": 4,
+    "subdivisions": 7,
     "wireframeColor": "#00ff88",
     "wireframeLineWidth": 1,
     "showWireframe": true
@@ -42,7 +42,7 @@
       "enabled": true
     },
     "clouds": {
-      "enabled": true,
+      "enabled": false,
       "map": {
         "path": "./textures/1k/04_earthcloudmap.jpg"
       },
